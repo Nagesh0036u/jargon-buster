@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "JargonBuster",
+  "version": "1.0",
+  "description": "Simplify dense web text instantly using AI.",
+  "permissions": [
+    "activeTab",
+    "contextMenus",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
